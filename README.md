@@ -25,6 +25,9 @@ See test.c and test.cpp for an example of usage.
 The tracing*() calls are not thread-safe, if your application has multiple threads allocating memory        
 please consider introducing a lock at the beginning of all the tracing*() functions and dumpAlloc().
 
+The constant ALLOC_TABLE_SIZE in memtracer.h can be used to increase the size of the allocation descriptors
+hashmap thus reducing its load and increasing the performarnce of add/remove operations.
+
 When used with C++ some modification could be needed to the new declarations if your environment don't 
 support namespaces. 
 
